@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Library Management System</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body class="bg-gray-100 h-screen flex justify-center items-center">
+
+    <div class="bg-white p-8 rounded-lg shadow-lg w-96">
+        <h2 class="text-2xl font-bold text-center mb-6 text-blue-600">Library System</h2>
+
+        <div class="flex justify-center mb-6 bg-gray-200 p-1 rounded">
+            <button onclick="setRole('Admin')" id="btn-admin" class="w-1/2 py-1 rounded bg-white shadow font-bold text-blue-600">Admin</button>
+            <button onclick="setRole('User')" id="btn-user" class="w-1/2 py-1 rounded text-gray-500">User</button>
+        </div>
+
+        <form onsubmit="handleLogin(event)">
+            <div class="mb-4">
+                <label class="block text-gray-700 text-sm font-bold mb-2">Username</label>
+                <input type="text" id="username" class="w-full p-2 border rounded focus:outline-none focus:border-blue-500">
+            </div>
+
+            <div class="mb-6">
+                <label class="block text-gray-700 text-sm font-bold mb-2">Password</label>
+                <input type="password" id="password" class="w-full p-2 border rounded focus:outline-none focus:border-blue-500" required>
+            </div>
+
+            <button type="submit" class="w-full bg-blue-600 text-white font-bold py-2 rounded hover:bg-blue-700 transition">
+                Login
+            </button>
+        </form>
+
+        <p id="error-msg" class="text-red-500 text-sm text-center mt-4 hidden">Invalid Credentials</p>
+    </div>
+
+    <script src="script.js"></script>
+    
+</body>
+</html>
